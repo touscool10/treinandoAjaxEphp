@@ -1,6 +1,6 @@
 <?php
     // Criar objeto de conexao
-    $conecta = mysqli_connect("localhost","root","","andes");
+    $conecta = mysqli_connect("localhost","root","root","andes");
     if ( mysqli_connect_errno()  ) {
         die("Conexao falhou: " . mysqli_connect_errno());
     }
@@ -23,7 +23,7 @@
 
     // consulta aos estados
     $estados = "SELECT * ";
-    $estados .= "FROM estados ";
+    $estados .= " FROM estados ";
     $lista_estados = mysqli_query($conecta, $estados);
     if(!$lista_estados) {
        die("erro no banco"); 
@@ -87,17 +87,7 @@
             </div>
         </main>
         
-        <script src="jquery.js"></script>
-        <script>
-            $('#formulario_transportadora').submit(function(e) {
-                e.preventDefault();
-                var formulario = $(this);
-                var retorno = alterarFormulario(formulario)
-            });
-            
-            function alterarFormulario(dados) {
-
-            }
-        </script>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="_my_Script.js"></script>
     </body>
 </html>

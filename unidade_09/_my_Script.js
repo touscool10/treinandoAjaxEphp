@@ -1,17 +1,17 @@
-$('#formulario_transportadora').submit(function(e){
+$('#formulario_transportadora').submit(function(e) {
     e.preventDefault();
     var formulario = $(this);
-    var retorno = inserirFormulario(formulario) ;
+    var retorno = alterarFormulario(formulario)
 });
 
-function inserirFormulario(dados) {
+function alterarFormulario(dados) {
     $.ajax({
-        type: "POST", 
+        type: "POST",
         data: dados.serialize(),
-        url: "inserir_transportadora.php",
-        async:false
-
+        url:  "alterar_transportadora.php",
+        async: false
     }).then(sucesso, falha);
+
     function sucesso(data) {
         let sucesso = $.parseJSON(data)["sucesso"];
         let mensagem = $.parseJSON(data)["mensagem"];
@@ -21,10 +21,9 @@ function inserirFormulario(dados) {
         } else {
             $("#mensagem p").html(mensagem);
         }
-        
     }
     function falha() {
         $("#mensagem").show();
-        $("#mensagem").html('Erro no sistema. Tente mais tarde');
-    }
-} 
+        $("#mensagem p").html("Erro no sistema. Tente mais tarde");
+    }   
+}
