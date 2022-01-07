@@ -1,6 +1,6 @@
 <?php
     // Criar objeto de conexao
-    $conecta = mysqli_connect("localhost","root","","andes");
+    $conecta = mysqli_connect("localhost","root","root","andes");
     if ( mysqli_connect_errno()  ) {
         die("Conexao falhou: " . mysqli_connect_errno());
     }
@@ -32,7 +32,8 @@
                 <ul>
                     <li><?php echo utf8_encode($linha["nometransportadora"]) ?></li>
                     <li><?php echo utf8_encode($linha["cidade"]) ?></li>
-                    <li><a href="" class="excluir">Excluir</a></li>
+                    <li><a href="" class="excluir" title="<?php echo $linha["transportadoraID"] ?>">Excluir</a></li>
+                   <!-- <input type="hidden" name="transportadoraID" value="<?php /*echo $linha["transportadoraID"]*/ ?>"> -->
                 </ul>
                 <?php
                     }
@@ -41,9 +42,9 @@
         </main>
 
         
-        <script src="jquery.js"></script>
-        <script>
-        </script>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="meu__Script.js"></script>
+        
     </body>
 </html>
 
