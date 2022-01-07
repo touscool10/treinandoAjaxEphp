@@ -1,6 +1,9 @@
 <?php
+    //Preparar o arquivo para callback
+    $callback = isset($_GET['callback']) ? $_GET['callback'] : false;
+
     // abrir conexao
-    $conecta = mysqli_connect("localhost","root","","andes");
+    $conecta = mysqli_connect("localhost","root","root","andes");
 
     $selecao = "SELECT nomeproduto, precounitario, imagempequena FROM produtos";
     $produtos = mysqli_query($conecta,$selecao);
@@ -10,7 +13,7 @@
         $retorno[] = $linha;
     }   
 
-    echo json_encode($retorno);
+    echo ($callback ? $callback . '(':'') . json_encode($retorno) . ($callback?')':'');
     
     // fechar conecta
     mysqli_close($conecta);

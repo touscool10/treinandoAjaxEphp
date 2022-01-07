@@ -22,6 +22,7 @@ main div#janela_formulario form p {
     color: #FFF;
     padding: 10px;
     border-radius: 5px;
+    width: 250px;
 }
 
 main div#janela_formulario form label {

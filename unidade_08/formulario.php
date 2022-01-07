@@ -1,6 +1,6 @@
 <?php
     // Criar objeto de conexao
-    $conecta = mysqli_connect("localhost","root","","andes");
+    $conecta = mysqli_connect("localhost","root","root","andes");
     if ( mysqli_connect_errno()  ) {
         die("Conexao falhou: " . mysqli_connect_errno());
     }
@@ -59,8 +59,7 @@
             </div>
         </main>
         
-        <script src="jquery.js"></script>
-        <script>
-        </script>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="_meuScript.js"></script>
     </body>
 </html>
