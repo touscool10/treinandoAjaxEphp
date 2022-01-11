@@ -8,8 +8,7 @@
     <body>
 
         
-        <script src="_js/jquery.js"></script>
-        <script>
-        </script>
+        <script type="text/javascript" src="_js/jquery.js"></script>
+        <script type="text/javascript" src="__mon__Script.js"></script>
     </body>
 </html>

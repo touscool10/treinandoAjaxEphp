@@ -7,8 +7,7 @@
 
     <body>
 
-        <script src="_js/jquery.js"></script>
-        <script>
-        </script>
+        <script type="text/javascript" src="_js/jquery.js"></script>
+        <script type="text/javascript" src="script_ex_03.js"></script>
     </body>
 </html>

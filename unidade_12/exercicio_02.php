@@ -40,8 +40,7 @@
             </div>
         </main>
         
-        <script src="_js/jquery.js"></script>
-        <script>
-        </script>
+        <script type="text/javascript" src="_js/jquery.js"></script>
+        <script type="text/javascript" src="script_ex_02.js"></script>
     </body>
 </html>
